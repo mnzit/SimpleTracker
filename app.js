@@ -1,7 +1,7 @@
 var express = require('express'),
     bodyParser = require('body-parser'),
     path = require('path')
-requestManager = require('./utils/RequestManager'),
+requestManager = require('./utils/RequestManager');
 
 
 var authorRouter = require('./routers/authorRouter');
