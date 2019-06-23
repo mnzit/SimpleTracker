@@ -2,7 +2,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     path = require('path')
 requestManager = require('./utils/RequestManager'),
-    request = require('request');
+
 
 var authorRouter = require('./routers/authorRouter');
 
@@ -27,4 +27,8 @@ let requestMnger = new requestManager();
 app.use(function (req, res, next) {
     requestMnger.track(req);
 });
+
+app.get("/home", (req, res) => {
+    res.send("<h1>HOME</h1>")
+})
 
