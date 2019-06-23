@@ -28,13 +28,7 @@ app.use(function (req, res, next) {
     requestMnger.track(req, res);
     next();
 });
-var getClientIp = function (req) {
-    return (req.headers["X-Forwarded-For"] ||
-        req.headers["x-forwarded-for"] ||
-        '').split(',')[0] ||
-        req.client.remoteAddress;
-};
+
 app.get("/home", (req, res) => {
     res.send("<h1>HOME</h1>");
-    console.log("Data" + getClientIp(req));
 })
