@@ -1,0 +1,71 @@
+body {
+    background: rgb(194, 245, 252);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+a {
+    text-decoration: none;
+    all: unset;
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    margin: 5px 0 5px 0;
+}
+
+table thead tr{
+    background:black;
+    color:white;
+}
+
+table tbody tr:hover{
+    background: rgb(197, 184, 184);
+}
+
+td, th{
+    border: 1px solid black;
+    padding:10px;
+}
+
+.btn {
+    border: 1px solid black;
+    padding: 3px 12px 3px 12px;
+    border-radius: 6px;
+    transition: 0.2s all;
+    margin:0 5px 0 5px;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn.btn-link:hover{
+    background: rgb(0, 0, 0); 
+    color:white;
+}
+
+.btn.btn-primary{
+    background: black;
+    color:white;
+}
+
+.btn.btn-primary:hover{
+    background: rgb(77, 76, 76);   
+}
+
+.center{
+    text-align: center;
+}
+
+.move-right{
+    float: right;
+}
+
+.bold{
+    font-weight: 900;
+}
+
+.font-md{
+    font-size: 21px;
+}

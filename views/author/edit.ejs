@@ -1,0 +1,23 @@
+<% include ../shared/header %>
+    <h1 class="center">EDIT AUTHOR</h1>
+    <form method="POST">
+        <div>
+            <label for="firstname">Firstname</label>
+            <input type="text" name="first_name" value="<%=record[0].first_name%>">
+        </div>
+        <div>
+            <label for="lastname">Lastname</label>
+            <input type="text" name="last_name" value="<%=record[0].last_name%>">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" value="<%=record[0].email%>">
+        </div>
+        <div>
+            <label for="lastname">Contact no</label>
+            <input type="text" name="contact_no" value="<%=record[0].contact_no%>">
+        </div>
+        <input type="hidden" name="id" value="<%=record[0].id%>">
+        <button type="submit">Update</button>
+    </form>
+<% include ../shared/footer %>

@@ -1,0 +1,27 @@
+<% include ../shared/header %>
+    <h1 class="center">AUTHORS</h1>
+    <a class="btn btn-primary move-right bold font-md" href="authors/add">+</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% records.forEach((record, index)=>{ %>
+        
+        <tr>
+            <td><%= record.id %></td>
+            <td><%= record.first_name %> <%= record.last_name %></td>
+            <td><%= record.email %></td>
+            <td><%= record.contact_no %></td>
+            <td><a class="btn btn-link" href="authors/author/edit/<%= record.id %>">edit</a><a class="btn btn-link" href="authors/author/delete/<%= record.id %>">delete</a></td>
+        </tr>
+        <% }); %>
+        </tbody>
+    </table>
+<% include ../shared/footer %>
