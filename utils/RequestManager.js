@@ -7,7 +7,7 @@ module.exports = function () {
                 userStackAccessKey: '134d50fb0cd5a0223399d13261968045',
                 ipStackAccessKey: 'b5aebbbb20d928c63b5a559e4eb6d780',
                 ua: req.headers['user-agent'],
-                ip:  req.ip.replace('::ffff:', '')
+                ip:  req.req.connection.remoteAddress.replace('::ffff:', '')
             };
 
             request.get(`http://api.userstack.com/detect?access_key=${config.userStackAccessKey}&ua=${config.ua}`, (err, data) => {
