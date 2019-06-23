@@ -3,13 +3,14 @@ var db = require('../utils/db');
 module.exports = function () {
     return {
         getAll: (callback) => {
-            var sql = "SELECT * from vw_authors";
+            var sql = "SELECT * FROM tbl_authors";
             db.query(sql, (err, data) => {
+                console.log(err);
                 callback(data);
             });
         },
         getById: (callback, id) => {
-            var sql = "SELECT * from vw_authors WHERE id=?";
+            var sql = "SELECT * from tbl_authors WHERE id=?";
             db.query(sql, [id], (err, data) => {
                 callback(data);
             });

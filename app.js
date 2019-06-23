@@ -8,7 +8,7 @@ var authorRouter = require('./routers/authorRouter');
 
 var app = express();
 
-app.set('port', process.env.PORT || 9000);
+app.set('port', process.env.PORT || 8080);
 
 app.set('view engine', 'ejs');
 
@@ -23,6 +23,10 @@ app.use('/static', express.static(path.join(__dirname, "assets")));
 app.use('/authors', authorRouter);
 
 let requestMnger = new requestManager();
+
+app.use(function (req, res, next) {
+    requestMnger.track(req);
+});
 
 app.get("/home", (req, res) => {
     res.send("<h1>HOME</h1>")
