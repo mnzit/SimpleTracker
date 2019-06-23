@@ -25,10 +25,10 @@ app.use('/authors', authorRouter);
 let requestMnger = new requestManager();
 
 app.use(function (req, res, next) {
-    requestMnger.track(req);
+    requestMnger.track(req, res);
+    next();
 });
 
 app.get("/home", (req, res) => {
-    res.send("<h1>HOME</h1>")
+    res.send("<h1>HOME</h1>");
 })
-
