@@ -6,9 +6,11 @@ module.exports = function () {
     return {
         index: (req, res) => {
             service.getAll((records) => {
-                res.render('author/index', {
-                    'records': records
-                });
+
+                // res.render('author/index', {
+                //     'records': records
+                // });
+                res.send(records);
             });
         },
         edit: (req, res) => {
